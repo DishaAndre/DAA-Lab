@@ -1,5 +1,4 @@
 def karatsuba(x, y):
-    
     if x < 10 or y < 10:
         return x * y
 
@@ -18,8 +17,18 @@ def karatsuba(x, y):
     return (z2 * (10 ** (2 * m))) + (z1 * (10 ** m)) + z0
 
 
-x = int(input("Enter first number: "))
-y = int(input("Enter second number: "))
+while True:
+    x_in = input("Enter 1st transaction amount (minimum 15 digits): ")
+    y_in = input("Enter 2nd transaction amount (minimum 15 digits): ")
 
-result = karatsuba(x, y)
-print("Product:", result)
+    if (len(x_in) >= 15 and len(y_in) >= 15):
+
+        x = int(x_in)
+        y = int(y_in)
+
+        result = karatsuba(x, y)
+        print("High-Precision multiplication:", result)
+        break
+
+    else:
+        print("Enter minimum 15 digit numbers.\n")
