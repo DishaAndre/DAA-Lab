@@ -1,15 +1,15 @@
 # Fractional Greedy Knapsack
 
 # Take inputs
-n = int(input("Enter number of objects: "))
-m = float(input("Enter capacity of sack: "))
+n = int(input("Enter number of items available in warehouse: "))
+m = float(input("Enter maximum weight capacity of transport vehicle: "))
 
 weights = []
 profits = []
 
 for i in range(n):
-    w = float(input(f"Enter weight of object {i+1}: "))
-    p = float(input(f"Enter profit of object {i+1}: "))
+    w = float(input(f"Enter weight of item {i+1}: "))
+    p = float(input(f"Enter profit of item {i+1}: "))
     weights.append(w)
     profits.append(p)
 
@@ -41,4 +41,4 @@ for ratio, weight, profit in items:
         remaining_capacity = 0
 
 # Output
-print("Maximum Profit =", total_profit)
+print("\nMaximum Profit from transported items =", total_profit)
